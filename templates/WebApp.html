@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang = 'en'>
+    <meta charset = "UTF-8">
+    <meta name = 'viewport' content = 'width=device-width, initial - scale = 1.0'>
+    <title>HousePrice_Predictor</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+    <style>
+        body {
+            background-image: url("{{ url_for('static', filename='grand-house-rendering-modern.jpg') }}");
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            margin: 0;
+            padding: 0;
+            height: 100vh; /* Ensures background covers the entire viewport height */
+        }
+    </style>
+    
+    <body>
+    <div class="container">
+        <h1>House Price Prediction</h1>
+        <form action="/predict" method="post">
+            <label for="Area Type"><u>Area Type:</u><br>
+                1. Super Built-Up Area<br>
+                2. Plot Area<br>
+                3. Built-Up Area<br>
+                4. Carpet Area
+            </label>
+            <select type="number" id="Area Type" name="Area Type" required>
+                <option value=1>1</option>
+                <option value=2>2</option>
+                <option value=3>3</option>
+                <option value=4>4</option>
+            </select><br>
+
+            <label for="Availability"><u>Availability:</u><br>
+                0. Not Ready to Move<br>
+                1. Ready to Move
+            </label>
+            <select type="number" id="Availability" name="Availability" required>
+                <option value=0>0</option>
+                <option value=1>1</option>
+            </select><br>
+
+            <label for="Bedrooms">Number of Bedrooms:</label>
+            <input type="number" id="Bedrooms" name="Bedrooms" required><br>
+
+            <label for="Bathrooms">Number of Bathrooms:</label>
+            <input type="number" id="Bathrooms" name="Bathrooms" required><br>
+
+            <label for="Balcony">Number of Balconies:</label>
+            <input type="number" id="Balcony" name="Balcony" required><br>
+            
+            <label for="Total Sqft">Total Sqft:</label>
+            <input type="number" id="Total Sqft" name="Total Sqft" required><br>
+
+            <input type="submit" value="Predict Price">
+        </form>
+        {% if prediction_text %}
+        <div class="output">
+            <h2>{{ prediction_text }}</h2>
+        </div>
+        {% endif %}
+    </div>
+    
+    </body>
+    </html>
+    
+</html>
