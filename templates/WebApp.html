@@ -20,26 +20,18 @@
     <div class="container">
         <h1>House Price Prediction</h1>
         <form action="/predict" method="post">
-            <label for="Area Type"><u>Area Type:</u><br>
-                1. Super Built-Up Area<br>
-                2. Plot Area<br>
-                3. Built-Up Area<br>
-                4. Carpet Area
-            </label>
-            <select type="number" id="Area Type" name="Area Type" required>
-                <option value=1>1</option>
-                <option value=2>2</option>
-                <option value=3>3</option>
-                <option value=4>4</option>
+            <label for="Area Type">Area Type:</label>
+            <select id="Area Type" name="Area Type" required>
+                <option value='Super Built-Up Area'>Super Built-Up Area</option>
+                <option value='Plot Area'>Plot Area</option>
+                <option value='Built-Up Area'>Built-Up Area</option>
+                <option value='Carpet Area'>Carpet Area</option>
             </select><br>
 
-            <label for="Availability"><u>Availability:</u><br>
-                0. Not Ready to Move<br>
-                1. Ready to Move
-            </label>
-            <select type="number" id="Availability" name="Availability" required>
-                <option value=0>0</option>
-                <option value=1>1</option>
+            <label for="Availability">Availability:</label>
+            <select id="Availability" name="Availability" required>
+                <option value='Not Ready to Move'>Not Ready to Move</option>
+                <option value='Ready to Move'>Ready to Move</option>
             </select><br>
 
             <label for="Bedrooms">Number of Bedrooms:</label>

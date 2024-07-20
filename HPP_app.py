@@ -17,8 +17,22 @@ def home():
 @cross_origin()
 def predict():
     if request.method == "POST":
-        area_type = int(request.form['Area Type'])
-        availability = int(request.form['Availability'])
+        area_type = request.form['Area Type']
+        if area_type == 'Super Built-Up Area':
+            area_type = 1
+        elif area_type == 'Plot Area':
+            area_type = 2
+        elif area_type == 'Built-Up Area':
+            area_type = 3
+        else:
+            area_type = 4
+            
+        availability = request.form['Availability']
+        if availability == 'Not Ready to Move':
+            availability = 0
+        else:
+            availability = 1
+            
         bedrooms = float(request.form['Bedrooms'])
         bathrooms = float(request.form['Bathrooms'])
         balcony = float(request.form['Balcony'])
