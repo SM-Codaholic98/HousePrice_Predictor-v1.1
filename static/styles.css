@@ -1,4 +1,8 @@
 body{
+    background-image: url('grand-house-rendering-modern-transformed.jpeg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
     font-family: 'Comic Sans MS', cursive;
     background-color: white;
     margin: 0;
