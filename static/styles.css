@@ -1,5 +1,5 @@
 body{
-    background-image: url('grand-house-rendering-modern-transformed.jpeg');
+    background-image: url('boxtype-home-contemporary-transformed.jpeg');
     background-size: cover;
     background-repeat: no-repeat;
     background-attachment: fixed;
@@ -16,9 +16,9 @@ body :hover{
     max-width: 400px;
     margin: 50px auto;
     padding: 30px;
-    background-color: rgb(0, 255, 255);
+    background-color: rgb(0, 255, 255, 0.8);
     border-radius: 40px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.6);
 }
 h1{
     text-align: center;

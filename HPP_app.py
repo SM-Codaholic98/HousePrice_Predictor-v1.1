@@ -4,7 +4,7 @@ import pickle
 import pandas as pd
 
 app = Flask(__name__)
-model = pickle.load(open("D:\\EDA\\HousePrice_Predictor v1.1\\HousePrice.pkl", "rb"))
+model = pickle.load(open("D:\\Predictor_Applications v1.2\\HousePrice_Predictor v1.3\\HousePrice.pkl", "rb"))
 
 
 @app.route("/")
